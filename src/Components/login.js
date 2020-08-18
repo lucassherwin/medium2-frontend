@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 export class login extends Component {
-    stae = {
+    state = {
         username: '',
         password: ''
     }
@@ -18,7 +18,7 @@ export class login extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        console.log('submit');
+        console.log('Login submit');
     }
 
     render() {
@@ -28,7 +28,7 @@ export class login extends Component {
                 <form>
                     Username: <input type='text' placeholder='username' onChange={this.handleUsername}></input> <br />
                     Password: <input type='password' placeholder='password' onChange={this.handlePassword}></input>
-                    <button onChange={(event) => this.handleSumbit(event)}>Submit</button>
+                    <button type="button" onClick={this.handleSubmit}> Submit</button>
                 </form>
             </div>
         )
